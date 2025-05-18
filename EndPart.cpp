@@ -5,7 +5,7 @@ void endpart(player metik) {
     system("cls");
     // Концовка 1: Поражение
     if (metik.lose == 1) {
-        PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/lose.mp3");
+        PlayMusic(L"misc/lose.mp3");
         system("color 0c");
         cout << R"(
      ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  
@@ -27,7 +27,7 @@ void endpart(player metik) {
     }
     // Концовка 5: Встреча с Егором
     if (metik.egorend == 1) {
-        PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/secretend.mp3");
+        PlayMusic(L"misc/secretend.mp3");
         system("color 0E");
         cout << R"(
                                                                                                                       
@@ -180,7 +180,7 @@ void endpart(player metik) {
         Sleep(1000);
         system("cls");
         StopMusic();
-        PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/secretend1.mp3");
+        PlayMusic(L"misc/secretend1.mp3");
         system("color 08");
         cout << R"(
                      
@@ -242,7 +242,7 @@ void endpart(player metik) {
 
     // Концовка 2: Истинная концовка
     if (metik.dreamkey[5] == 1 && metik.carma >= 8 && metik.boss == 3) {
-        PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/trueend.mp3");
+        PlayMusic(L"misc/trueend.mp3");
         system("color 0D");
         cout << R"(
 ::::::::::: :::::::::  :::    ::: ::::::::::     :::::::::: ::::    ::: :::::::::  ::::::::::: ::::    :::  ::::::::  
@@ -261,7 +261,7 @@ void endpart(player metik) {
         return;
     }
     if (metik.dreamkey[5] == 1) {
-        PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/neutral_end.mp3");
+        PlayMusic(L"misc/neutral_end.mp3");
         system("color 0B");
         cout << R"(
                                                                                                      
@@ -315,7 +315,7 @@ void endpart(player metik) {
     }
     // Концовка 3: Хорошая, но не истинная
     if (metik.carma >= 6 && metik.boss == 3 && metik.dreamkey[5] == 0) {
-        PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/pacifistend.mp3");
+        PlayMusic(L"misc/pacifistend.mp3");
         system("color 0E");
         cout << R"(
                                    ,,      ,...  ,,                  
@@ -336,8 +336,8 @@ void endpart(player metik) {
     }
 
     // Концовка 4: Средняя
-    if (metik.carma >= 4 && (metik.boss == 3)) {
-        PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/normalend.mp3");
+    if (metik.carma >= 2 && (metik.boss == 3)) {
+        PlayMusic(L"misc/normalend.mp3");
         system("color 0A");
         cout << R"(
     
@@ -361,7 +361,7 @@ void endpart(player metik) {
     }
 
     if (metik.boss == 2) {
-        PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/murdererend.mp3");
+        PlayMusic(L"misc/murdererend.mp3");
         system("color 04");
         cout << R"(
               ░█▄█░█░█░█▀▄░█▀▄░█▀▀░█▀▄░█▀▀░█▀▄
@@ -375,7 +375,7 @@ void endpart(player metik) {
         return;
     }
     if (metik.eng == 1) {
-        PlayMusic(L"C:/Users/Acer/source/repos/MCLOVER/neutral_end.mp3");
+        PlayMusic(L"misc/neutral_end.mp3");
         system("color 09");
         cout << R"(
    EEEEEEE                 lll iii       hh                                  

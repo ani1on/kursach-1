@@ -6,7 +6,7 @@ void Menu(int& out) {//меню игры
 	int a=1;
 	for (; b;) {
 		system("color 0");
-		PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/menuthem.mp3");
+		PlayMusic(L"misc/menuthem.mp3");
 		system("cls");
 		SetCursorPosition(0, 0);
 		cout << R"(
@@ -161,7 +161,7 @@ void Menu(int& out) {//меню игры
 	StopMusic();
 }
 void Step1() {//первый ивент
-	PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/home.mp3");
+	PlayMusic(L"misc/home.mp3");
 	cout << R"(
      :::::::::::: mm      m        aaaaaaaa  :         WW  :::
   ::::aaaaaaaammmm mmmmmmmmmmmmm aa :::   aa :         WWW :::
@@ -272,7 +272,7 @@ void Step2(player& metik) {
 	cout << "А погода и вправду не плоха...";
 	skip('R', 'r');
 	StopMusic();
-	PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/boss.mp3");
+	PlayMusic(L"misc/boss.mp3");
 	SetCursorPosition(50, 30);
 	cout << "? >Эй!                                  ";
 	skip('R', 'r');
@@ -458,7 +458,7 @@ iiii                    ii   ii #iiii i                #       : ::::::       ##
 	StopMusic();
 }
 void Step3(player& metik) {
-	PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/home.mp3");
+	PlayMusic(L"misc/home.mp3");
 	switch (metik.boss) {
 	case 1:
 		SetCursorPosition(2, 36);

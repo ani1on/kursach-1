@@ -82,7 +82,7 @@ void EnglishLesson(player& metik) {
 	skip('R', 'r');
 	StopMusic();
 	system("cls");
-	PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/englishtest.mp3");
+	PlayMusic(L"misc/englishtest.mp3");
 	cout << R"(
   ===========::: ..         ............ ...    ................   ....................... ............          ..                         
  = =======  ::  ............................                                                  ....:    ........-_, ....                     
@@ -138,9 +138,8 @@ void EnglishLesson(player& metik) {
 		getline(cin, str);
 		examwords(sol, str, i);
 		SetCursorPosition(100, 0);
-		cout << sol;
 	}
-	PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/home.mp3");
+	PlayMusic(L"misc/home.mp3");
 	StopMusic();
 	system("cls");
 	SetCursorPosition(2, 10);
@@ -163,7 +162,7 @@ void EnglishLesson(player& metik) {
 	skip('R', 'r');
 	if (sol > 4) {
 		SetCursorPosition(2, 22);
-		cout << "...Павлючик, Ходынюк зачет...              ";
+		cout << "...Павлючик, \033[92mХодынюк зачет...\033[0m              ";
 		skip('R', 'r');
 		SetCursorPosition(2, 23);
 		cout << "Неплохо, это повод пойти домой.              ";
@@ -172,7 +171,7 @@ void EnglishLesson(player& metik) {
 	}
 	else {
 		SetCursorPosition(2, 22);
-		cout << "Павлючик зачет, Ходынюк езачет...              ";
+		cout << "Павлючик зачет, \033[91mХодынюк незачет...\033[0m              ";
 		skip('R', 'r');
 		SetCursorPosition(2, 23);
 		cout << "Грустно, на физру настроения идти нет, сразу домой.              ";

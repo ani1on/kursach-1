@@ -31,7 +31,7 @@ void clearscreen() {
 
 )";
 }
-int fightmenu(int& hp, int& hb, string& healthboss, string& healthplayer, int& agro, player& metik) {
+int fightmenu( int& hb, string& healthboss, int& agro, player& metik) {
 	SetCursorPosition(2, 40);
 	cout << "===================";
 	SetCursorPosition(2, 42);
@@ -324,10 +324,10 @@ int fightmenu(int& hp, int& hb, string& healthboss, string& healthplayer, int& a
 	cout << "                                                                                                    ";
 	return 0;
 }
-int pianogame(piano a1, piano a2, int numattac, int agro) {
-	int score1 = 0, score2 = 0;
-	bool egor1 = true, egor2 = true;
-	for (int i = 1, j = 1, global = 0, k = 0; k <= numattac; i++, global++) {
+int pianogame(piano a1, int numattac) {
+	int score1 = 0;
+	bool egor1 = true;
+	for (int i = 1, j = 1, k = 0; k <= numattac; i++) {
 		for (int p = 116; p < 154; p++) {
 			SetCursorPosition(p, 28);
 			cout << "-";
@@ -335,37 +335,19 @@ int pianogame(piano a1, piano a2, int numattac, int agro) {
 			cout << "-";
 		}
 
-		//
-		if (global > 20) {
-			j++;
-
-			a2.y = j;
-			a2.move();
-
-			pianoplayer(a2.key, a1.key, a2.y, score2, egor2);
-			if (j >= 40 && k < numattac) {
-				a2.key = rand() % 4;
-				j = 1;
-				k++;
-			}
-
-		}
-		//
-
 		a1.y = i;
 		a1.move();
-		pianoplayer(a1.key, a2.key, a1.y, score1, egor1);
+		pianoplayer(a1.key, a1.y, score1, egor1);
 		if (i >= 40) {
 			a1.key = rand() % 4;
 			i = 1;
 			k++;
 		}
-		//
 		//Sleep(3);
 	}
-	return score1 + score2 > numattac;
+	return score1 > numattac;
 }
-int pianoplayer(int key, int key1, int y, int& meaning, bool& egor) {
+int pianoplayer(int key,  int y, int& meaning, bool& egor) {
 	if (egor) {
 		bool keyPressedA = (GetAsyncKeyState('A') & 0x8000);
 		bool keyPressedD = (GetAsyncKeyState('D') & 0x8000);
@@ -379,17 +361,9 @@ int pianoplayer(int key, int key1, int y, int& meaning, bool& egor) {
 				egor = false;
 			}
 			else {
-				if ((keyPressedA && key1 == 0) || (keyPressedD && key1 == 1) ||
-					(keyPressedJ && key1 == 2) || (keyPressedL && key1 == 3)) {
-					meaning++;
-					egor = false;
-
-
-
-				}
-				else {
+			
 					meaning--;
-				}
+				
 			}
 			return 0;
 		}

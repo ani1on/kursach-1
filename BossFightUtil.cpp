@@ -1,7 +1,7 @@
 #include "BossFight.h"
 using namespace std;
 void fight(player& metik) {
-	PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/bossfightthem.mp3");
+	PlayMusic(L"misc/bossfightthem.mp3");
 	string healthboss = "|####################|", healthplayer = "|#####|";
 	int hb = 21, hp = 6;
 	SetCursorPosition(2, 36);
@@ -37,11 +37,11 @@ void fight(player& metik) {
 			}
 		}
 	}
-	piano a1, a2, a3;
+	piano a1;
 	int result, agro = 20;
 	for (; agro > 0 && hp > 1 && hb > 1;) {
-
-		result = pianogame(a1, a2, 5, agro);
+		const int numattac = 5;
+		result = pianogame(a1, numattac);
 		if (!result) {
 			SetCursorPosition(2, 36);
 			cout << "Мужик попал по тебе, что бедете делать?              ";
@@ -57,7 +57,7 @@ void fight(player& metik) {
 			SetCursorPosition(2, 36);
 			cout << "Ты успешно увернулись от его ударов, что будете делать?                ";
 		}
-		fightmenu(hp, hb, healthboss, healthplayer, agro, metik);
+		fightmenu( hb, healthboss,  agro, metik);
 		SetCursorPosition(2, 33);
 
 	}

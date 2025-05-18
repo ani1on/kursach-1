@@ -920,7 +920,7 @@ void Room3(player& metik) {
                                ▎▍               ▏▎                ▋▏                                
 )";
 	piano a1, a2;
-	int sol = pianogame(a1, a2, 5, 0);
+	int sol = pianogame(a1, 5);
 	system("cls");
 	if (sol < 1) {
 		system("cls");
@@ -1209,7 +1209,7 @@ void Room4(player& metik) {
 
 
 void Dream(player& metik) {
-	PlayMusic(L"C:/Users/Acer/source/repos/курсч 1/misc/sound1.mp3");
+	PlayMusic(L"misc/sound1.mp3");
 	system("color 01");
 	SetCursorPosition(70, 25);
 	cout << "...";

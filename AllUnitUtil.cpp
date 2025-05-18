@@ -39,7 +39,7 @@ void solution(int ymax, int ymin, int x, int& sol, int step) {//функция �
 
 		}
 		if (GetAsyncKeyState('E') & 0x8000) {
-			SetCursorPosition(74, y);
+			SetCursorPosition(x, y);
 			cout << " ";
 
 			break;
