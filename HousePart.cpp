@@ -759,7 +759,7 @@ void Room2(player& metik) {
 
 )";
 	int px = x, py = y;
-	for (int key = 1, trig[8]{ 1,1,1,1,1,1,1,0 }; key;) {
+	for (int key = 1, trig[2]{ 1,1 }; key;) {
 
 		if ((GetAsyncKeyState('W') & 0x8000)) {
 			moveStep(x, y, 'W');
@@ -855,7 +855,7 @@ void Room2(player& metik) {
 			}
 			if ((x >= 14) && (x <= 15) && (y >= 8) && (y <= 10)) {
 				SetCursorPosition(80, 2);
-				cout << "Облеванный унитаз.";
+				cout << "Унитаз.";
 				skip('R', 'r');
 				SetCursorPosition(80, 2);
 				cout << "                                                                 ";
@@ -919,7 +919,7 @@ void Room3(player& metik) {
                                ▂▌              ▎▃█▊              ▏▃▍                                
                                ▎▍               ▏▎                ▋▏                                
 )";
-	piano a1, a2;
+	piano a1;
 	int sol = pianogame(a1, 5);
 	system("cls");
 	if (sol < 1) {
@@ -949,14 +949,14 @@ void Room3(player& metik) {
 )";
 
 	int px = x, py = y;
-	for (int key = 1, trig[8]{ 1,1,1,1,1,1,1,0 }; key;) {
-		if (trig[1]) {
+	for (int key = 1, trig = 1; key;) {
+		if (trig) {
 			for (int i = 12; i > 5; i--) {
 				SetCursorPosition(36, i);
 				cout << "           ";
 				Sleep(100);
 			}
-			trig[1] = 0;
+			trig = 0;
 		}
 		if ((GetAsyncKeyState('W') & 0x8000)) {
 			moveStep(x, y, 'W');
@@ -1057,7 +1057,7 @@ void Room4(player& metik) {
 
 )";
 	int px = x, py = y;
-	for (int key = 1, trig[8]{ 1,1,1,1,1,1,1,0 }; key;) {
+	for (int key = 1, trig[3]{ 1,1,1 }; key;) {
 		if ((GetAsyncKeyState('W') & 0x8000)) {
 			moveStep(x, y, 'W');
 			if ((px != x) || (py != y)) {
@@ -1218,7 +1218,7 @@ void Dream(player& metik) {
 	int x = 11, y = 8;
 	Corridor();
 	int px = x, py = y;
-	for (int key = 1, trig[8]{ 1,1,1,1,1,1,1,0 }; key;) {
+	for (int key = 1, trig[2]{ 1,1 }; key;) {
 		system("color 01");
 		if ((GetAsyncKeyState('W') & 0x8000)) {
 			moveStep(x, y, 'W');

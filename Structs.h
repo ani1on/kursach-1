@@ -1,13 +1,13 @@
 #pragma once
 
 struct player {
-    int ivent[10]{ 1,1,1,1,1,1,1,1,1,1 };
+    int ivent[5]{ 1,1,1,1,1 };
     int dreamkey[8]{ 0,0,0,0,0,0,0,0 };
     int lose = 0;
-    int carma;
-    int boss;
+    int carma=0;
+    int boss=0;
     int egorend = 0;
-    int eng;
+    int eng=0;
 };
 
 struct piano {
